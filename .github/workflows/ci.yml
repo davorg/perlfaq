@@ -41,7 +41,7 @@ jobs:
       - name: Install Dist::Zilla
         run: cpanm --notest Dist::Zilla
       - name: Install Dist::Zilla::App::Command::installdeps
-        run: Dist::Zilla::App::Command::installdeps
+        run: cpanm --notest Dist::Zilla::App::Command::installdeps
       - name: Install dependencies
         run: dzil installdeps --suggests --recommends
       - name: Test
