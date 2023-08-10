@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
 
 env:
-  - AUTHOR_TESTING: 1
-  - AUTOMATED_TESTING: 1
-  - RELEASE_TESTING: 0 
+  AUTHOR_TESTING: 1
+  AUTOMATED_TESTING: 1
+  RELEASE_TESTING: 0 
 
 jobs:
   continuous-integration:
