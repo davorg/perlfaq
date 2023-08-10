@@ -38,6 +38,8 @@ jobs:
           perl-version: ${{ matrix.perl }}
       - name: Perl version
         run: perl -V
+      - name: Install DateTime
+        run: apt-get install -y libdatetime-perl
       - name: Install Dist::Zilla
         run: cpanm --notest Dist::Zilla
       - name: Install Dist::Zilla::App::Command::installdeps
