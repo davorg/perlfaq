@@ -14,10 +14,9 @@ env:
 
 jobs:
   continuous-integration:
-    runs-on: ${{ matrix.os }}
+    runs-on: 'ubuntu-latest'
     strategy:
       matrix:
-        os: [ 'ubuntu-latest' ]
         perl:
           - '5.20'
           - '5.22'
@@ -29,7 +28,7 @@ jobs:
           - '5.34'
           - '5.36'
           - 'latest'
-    name: Perl ${{ matrix.perl }} on ${{ matrix.os }}
+    name: Perl ${{ matrix.perl }} on ubuntu-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v3
