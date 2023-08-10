@@ -44,3 +44,10 @@ jobs:
         run: dzil installdeps --suggests --recommends
       - name: Test
         run: dzil test
+      - name: Archive CPAN logs on Unix
+        if: ${{ failure() && matrix.os != 'windows-latest' }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: cpan_log
+          path: /home/runner/.cpanm/work/*/build.log
+          retention-days: 5
